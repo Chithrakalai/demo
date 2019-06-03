@@ -40,7 +40,7 @@ public class SSNRestfulServices {
     private final AtomicLong counter = new AtomicLong();
     DatabaseConnection dataCon = new DatabaseConnection();
 
-    @RequestMapping("/greeting")
+    @RequestMapping("/good_greeting")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
         return new Greeting(counter.incrementAndGet(),
                             String.format(template, name));
